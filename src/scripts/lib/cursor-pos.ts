@@ -41,7 +41,7 @@ let properties = [
 
 ];
 
-let isFirefox = (window as any).mozInnerScreenX != null;
+let isFirefox = false; //(window as any).mozInnerScreenX != null;
 
 export function getCaretCoords(element: HTMLInputElement | HTMLTextAreaElement, position: number, options?: { debug: boolean }) {
     let debug = options && options.debug || false;

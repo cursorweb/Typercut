@@ -1,23 +1,54 @@
+body {
+    margin: 0;
+}
+
 .text {
+    background: red;
+    
     position: absolute;
-    top: 0;
-    left: 0;
-    overflow: scroll;
+    top: 50%;
+    height: 100px;
+    overflow: hidden;
 
     font-size: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: calc(100% - 15px);
+
+    padding: 5px;
+    resize: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.text:focus {
+    outline: 0;
 }
 
 .cursor {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
     background: blue;
     width: 4px;
     height: 20px;
     border-radius: 8px;
 }
 
-.pos {
-    visibility: hidden;
+.typing {
+    background: rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    top: 50%;
+
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: 2px solid black;
+
+    width: calc(100% - 15px);
+    height: 100px;
+
+    padding: 5px;
 }
