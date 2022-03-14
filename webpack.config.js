@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = env => {
     if (env.mode == "development") {
@@ -13,11 +14,21 @@ module.exports = env => {
                         use: "ts-loader",
                         exclude: /node_modules/,
                     },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            MiniCssExtractPlugin.loader,
+                            'css-loader'
+                        ]
+                    },
                 ],
             },
             resolve: {
                 extensions: [".ts", ".js"],
             },
+            plugins: [
+                new MiniCssExtractPlugin(),
+            ],
             output: {
                 filename: "main.js",
                 path: path.resolve(__dirname, "dist"),
@@ -33,10 +44,27 @@ module.exports = env => {
                         use: "ts-loader",
                         exclude: /node_modules/,
                     },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            MiniCssExtractPlugin.loader,
+                            'css-loader'
+                        ]
+                    },
                 ],
             },
             resolve: {
                 extensions: [".ts", ".js"],
+            },
+            plugins: [
+                new MiniCssExtractPlugin(),
+            ],
+            optimization: {
+                minimize: true,
+                minimizer: [
+                    "...",
+                    new CssMinimizerPlugin()
+                ],
             },
             output: {
                 filename: "main.js",

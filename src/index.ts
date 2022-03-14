@@ -1,5 +1,4 @@
-function sum(a: number, b: number): number {
-    return a + b;
-}
+// this file only imports code
 
-console.log(sum(1, 1));
+import "./styles/style.css";
+import "./scripts/main.ts";

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch --env mode=development",
-    "build": "webpack --env mode=production"
+    "prod": "webpack --env mode=production"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/cursorweb/PaperBoard#readme",
   "devDependencies": {
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "mini-css-extract-plugin": "^2.6.0",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.2",
