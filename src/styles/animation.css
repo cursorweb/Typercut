@@ -1,0 +1,7 @@
+@keyframes fadein {
+    from { opacity: 0; }
+}
+
+@keyframes fadeout {
+    to { opacity: 0; }
+}
