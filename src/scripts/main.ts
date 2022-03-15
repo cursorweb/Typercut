@@ -20,7 +20,9 @@ textarea.addEventListener("input", () => {
 });
 
 textarea.addEventListener("blur", () => {
-    fadeIn(blur, 20);
+    blur.classList.add("fade-in");
+    blur.classList.remove("fade-out");
+    blur.style.display = "block";
 });
 
 window.addEventListener("resize", () => {
@@ -31,6 +33,12 @@ window.addEventListener("resize", () => {
 });
 
 typing.addEventListener("click", () => {
-    fadeOut(blur, 20);
+    blur.classList.remove("fade-in");
+    blur.classList.add("fade-out");
+
     textarea.focus();
+});
+
+blur.addEventListener("animationend", () => {
+    if (blur.classList.contains("fade-out")) blur.style.display = "none";
 });

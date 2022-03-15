@@ -5,3 +5,11 @@
 @keyframes fadeout {
     to { opacity: 0; }
 }
+
+.fade-in {
+    animation: fadein 0.2s;
+}
+
+.fade-out {
+    animation: fadeout 0.2s;
+}
