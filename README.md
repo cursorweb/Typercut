@@ -1,8 +1,8 @@
-# Paper Board
+# Typercut
 A minimalistic test with fun features!
 
 ## About
-PaperBoard is a typing test focusing on fun features and games to help improve typing!
+Typercut is a typing test focusing on fun features and games to help improve typing!
 
 You can customize the theme and layout, but we want to keep as little buttons to click as possible. You are here to type!
 

@@ -1,5 +1,4 @@
 import { getCaretCoords } from "./lib/cursor-pos";
-import { fadeIn, fadeOut } from "./lib/fade-in";
 
 const textarea: HTMLTextAreaElement = document.querySelector(".text");
 const cursor: HTMLDivElement = document.querySelector(".cursor");

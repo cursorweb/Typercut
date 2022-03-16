@@ -1,5 +1,5 @@
 {
-  "name": "paperboard",
+  "name": "typercut",
   "version": "1.0.0",
   "description": "fun typing test",
   "main": "index.js",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cursorweb/PaperBoard.git"
+    "url": "git+https://github.com/cursorweb/Typercut.git"
   },
   "keywords": [
-    "paperboard",
+    "typercut",
     "typing"
   ],
   "author": "Coder100",
