@@ -1,0 +1,26 @@
+Type
+    words 10, 25, 50, 100 / custom
+    time 10, 30, 60 / custom
+    words [num] or time [num] whichever happens [first/last]
+
+Test
+    time 60
+
+Freetype
+    type whatever
+
+Fun
+Configure: words, time
+    Gibberish
+    Numbers
+    Quotes
+        easy, medium, hard
+    Harder Words # things like antidisestablishmentarianism
+    Ascii # !@#$%^&*
+    Coder100 Mode # Quoted, punctuation, number: "hi"? World. 4566
+    Bookie Mode # Random punctuation, number: HeLlO 10348 wOrLD
+    Wordle # Only 5 letter words
+    Programming Language
+        Javascript, Java, Python, C#, C++, Europa Lang, Cookey Lang
+    Pi # only available on 3/14
+    Rhymes
