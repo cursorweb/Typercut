@@ -20,6 +20,8 @@ body {
     resize: none;
     overflow: hidden;
     opacity: 0;
+
+    color: transparent;
 }
 
 .text:focus {

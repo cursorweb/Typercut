@@ -6,7 +6,6 @@ const textarea: HTMLTextAreaElement = document.querySelector(".text");
 const cursor: HTMLDivElement = document.querySelector(".cursor");
 
 const typing: HTMLDivElement = document.querySelector(".typing");
-// const text: HTMLDivElement = document.querySelector(".type-text");
 
 const blur: HTMLDivElement = document.querySelector(".blur-div");
 
@@ -17,18 +16,7 @@ const chars: Char[] = [];
 textarea.value = "";
 
 
-filterText(textarea, /* () => {
-    chars.push(new Char(textarea.value[textarea.value.length - 1]));
-}, () => {
-    chars[chars.length - 1].remove();
-    chars.splice(-1, 1);
-    console.log(chars, chars.length);
-}, () => {
-    const coords = getCaretCoords(textarea, textarea.selectionEnd);
-
-    cursor.style.top = `${coords.top}px`;
-    cursor.style.left = `${coords.left}px`;
-} */);
+filterText(textarea);
 
 textarea.addEventListener("input", () => {
     const val = textarea.value;
