@@ -98,8 +98,9 @@ export function getCaretCoords(element: HTMLTextAreaElement, position: number, o
 
     if (isFirefox) {
         // Firefox lies about the overflow property for textareas: https://bugzilla.mozilla.org/show_bug.cgi?id=984275
-        if (element.scrollHeight > parseInt(computed.height))
-            style.overflowY = "scroll";
+        // if (element.scrollHeight > parseInt(computed.height))
+        //     style.overflowY = "scroll";
+        style.overflow = "hidden";
     } else {
         style.overflow = "hidden";  // for Chrome to not render a scrollbar; IE keeps overflowY = "scroll"
     }

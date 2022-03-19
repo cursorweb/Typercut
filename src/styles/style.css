@@ -18,10 +18,10 @@ body {
 
     padding: 5px;
     resize: none;
-    overflow: hidden;
     opacity: 0;
 
     color: transparent;
+    caret-color: transparent;
 }
 
 .text:focus {
@@ -34,6 +34,7 @@ body {
     margin: 0;
     user-select: none;
     white-space: pre-wrap;
+    overflow: hidden;
 }
 
 .blur-div {
