@@ -43,7 +43,7 @@ let properties = [
 
 let isFirefox = false; //(window as any).mozInnerScreenX != null;
 
-export function getCaretCoords(element: HTMLInputElement | HTMLTextAreaElement, position: number, options?: { debug: boolean }) {
+export function getCaretCoords(element: HTMLTextAreaElement, position: number, options?: { debug: boolean }) {
     let debug = options && options.debug || false;
     if (debug) {
         let el = document.querySelector("#input-textarea-caret-position-mirror-div");
