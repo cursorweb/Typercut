@@ -19,4 +19,16 @@ export class Char {
         this.el.remove();
         this.el = null;
     }
+
+    backspace() {
+        this.el.classList.remove("correct", "incorrect");
+    }
+
+    check(c: string) {
+        if (c == this.char) {
+            this.el.classList.add("correct");
+        } else {
+            this.el.classList.add("incorrect");
+        }
+    }
 }

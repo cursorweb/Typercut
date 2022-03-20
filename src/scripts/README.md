@@ -5,6 +5,8 @@ There may be an overwhelming amount of files, here are some simple descriptions 
 
 `typing/`: Library for the typing component.
 
+`mode/`: The typing modes (freetype, timed, words, etc.)
+
 `lib/`: Useful things from stackoverflow, etc. that don't pertain to any previous folders to keep code DRY.
 
 `main.ts`: Entry point, this is where all the code and components are executed.

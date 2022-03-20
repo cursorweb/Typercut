@@ -1,6 +1,7 @@
 import { getCaretCoords } from "./lib/cursor-pos";
+import { freetype } from "./modes/freetype";
 import { Char } from "./typing/char";
-import { filterText, compare } from "./typing/input";
+import { filterText } from "./typing/input";
 
 const textarea: HTMLTextAreaElement = document.querySelector(".text");
 const cursor: HTMLDivElement = document.querySelector(".cursor");
@@ -19,19 +20,7 @@ textarea.value = "";
 filterText(textarea);
 
 textarea.addEventListener("input", () => {
-    const val = textarea.value;
-
-    let diff = compare(val);
-
-    if (diff > 0) {
-        chars.push(new Char(val[val.length - 1]));
-    } else if (diff < 0) {
-        const clength = chars.length;
-        for (let i = clength - 1; i >= clength + diff; i--) {
-            chars[i].remove();
-            chars.splice(i, 1);
-        }
-    }
+    freetype(chars, textarea);
 
     const coords = getCaretCoords(textarea, textarea.selectionEnd);
 
