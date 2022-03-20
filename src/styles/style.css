@@ -74,3 +74,11 @@ body {
 
     padding: 5px;
 }
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}

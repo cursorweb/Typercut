@@ -1,5 +1,6 @@
 import { getCaretCoords } from "./lib/cursor-pos";
-import { freetype } from "./modes/freetype";
+import { FreeType } from "./modes/freetype";
+import { WordsType } from "./modes/words";
 import { Char } from "./typing/char";
 import { filterText } from "./typing/input";
 
@@ -11,16 +12,17 @@ const typing: HTMLDivElement = document.querySelector(".typing");
 const blur: HTMLDivElement = document.querySelector(".blur-div");
 
 
-const chars: Char[] = [];
+const chars: Char[] = "type this text super fast or else you suck at typing".split("").map((c) => new Char(c));
 
 
 textarea.value = "";
+const text = new WordsType(chars, textarea);
 
 
 filterText(textarea);
 
 textarea.addEventListener("input", () => {
-    freetype(chars, textarea);
+    text.handler();
 
     const coords = getCaretCoords(textarea, textarea.selectionEnd);
 

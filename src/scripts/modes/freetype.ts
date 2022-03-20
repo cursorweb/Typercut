@@ -1,18 +1,19 @@
 import { Char } from "../typing/char";
-import { compare } from "../typing/input";
+import { TypeMode } from "./base";
 
-export function freetype(chars: Char[], textarea: HTMLTextAreaElement) {
-    const val = textarea.value;
+export class FreeType extends TypeMode {
+    append(val: string) {
+        this.chars.push(new Char(val[val.length - 1]));
+    }
 
-    let diff = compare(val);
+    delete(diff: number) {
+        const clength = this.chars.length;
+        const start = clength - 1;
+        const end = clength + diff;
 
-    if (diff > 0) {
-        chars.push(new Char(val[val.length - 1]));
-    } else if (diff < 0) {
-        const clength = chars.length;
-        for (let i = clength - 1; i >= clength + diff; i--) {
-            chars[i].remove();
-            chars.splice(i, 1);
+        for (let i = start; i >= end; i--) {
+            this.chars[i].remove();
+            this.chars.splice(i, 1);
         }
     }
 }
