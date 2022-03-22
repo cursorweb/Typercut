@@ -22,6 +22,7 @@ export class Char {
 
     backspace() {
         this.el.classList.remove("correct", "incorrect");
+        this.el.textContent = this.char;
     }
 
     check(c: string) {
@@ -29,6 +30,7 @@ export class Char {
             this.el.classList.add("correct");
         } else {
             this.el.classList.add("incorrect");
+            this.el.textContent = c;
         }
     }
 }
