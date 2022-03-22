@@ -38,7 +38,6 @@ let properties = [
 
     "tabSize",
     "MozTabSize"
-
 ];
 
 let isFirefox = false; //(window as any).mozInnerScreenX != null;

@@ -1,4 +1,4 @@
-import { Char } from "../typing/char";
+import type { Char } from "../typing/char";
 import { compare } from "../typing/input";
 
 export class TypeMode {

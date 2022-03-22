@@ -12,7 +12,7 @@ const typing: HTMLDivElement = document.querySelector(".typing");
 const blur: HTMLDivElement = document.querySelector(".blur-div");
 
 
-const chars: Char[] = "type this text super fast or else you suck at typing".split("").map((c) => new Char(c));
+const chars: Char[] = "type this text super fast or else you suck at typing ".split("").map((c) => new Char(c));
 
 
 textarea.value = "";
