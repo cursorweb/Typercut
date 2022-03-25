@@ -4,10 +4,10 @@ import { WordsType } from "./modes/words";
 import { Char } from "./typing/char";
 import { filterText } from "./typing/input";
 
-const textarea: HTMLTextAreaElement = document.querySelector(".text");
+const textarea: HTMLTextAreaElement = document.querySelector(".textarea");
 const cursor: HTMLDivElement = document.querySelector(".cursor");
 
-const typing: HTMLDivElement = document.querySelector(".typing");
+const typingCont: HTMLDivElement = document.querySelector(".typing-cont");
 
 const blur: HTMLDivElement = document.querySelector(".blur-div");
 
@@ -43,7 +43,7 @@ window.addEventListener("resize", () => {
     cursor.style.left = `${coords.left}px`;
 });
 
-typing.addEventListener("click", () => {
+typingCont.addEventListener("click", () => {
     blur.classList.remove("fade-in");
     blur.classList.add("fade-out");
 

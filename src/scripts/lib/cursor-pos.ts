@@ -52,7 +52,7 @@ export function getCaretCoords(element: HTMLTextAreaElement, position: number, o
     // The mirror div will replicate the textarea's style
     let div = document.createElement("div");
     div.id = "input-textarea-caret-position-mirror-div";
-    document.body.appendChild(div);
+    element.parentNode.appendChild(div);
 
     let style = div.style;
     let computed = window.getComputedStyle ? window.getComputedStyle(element) : (element as any).currentStyle;  // currentStyle for IE < 9
@@ -68,7 +68,7 @@ export function getCaretCoords(element: HTMLTextAreaElement, position: number, o
     if (!debug)
         style.visibility = "hidden";  // not "display: none" because we want rendering
 
-    // Transfer the element"s properties to the div
+    // Transfer the element's properties to the div
     properties.forEach(prop => {
         if (isInput && prop == "lineHeight") {
             // Special case for <input>s because text is rendered centered and line height may be != height
@@ -130,7 +130,7 @@ export function getCaretCoords(element: HTMLTextAreaElement, position: number, o
     if (debug) {
         span.style.backgroundColor = "#aaa";
     } else {
-        document.body.removeChild(div);
+        element.parentNode.removeChild(div);
     }
 
     return coordinates;

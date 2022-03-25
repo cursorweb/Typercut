@@ -2,11 +2,10 @@ body {
     margin: 0;
 }
 
-.text {
+.textarea {
     background: var(--primary);
     
     position: absolute;
-    top: 50%;
     height: 100px;
     overflow: hidden;
 
@@ -16,19 +15,21 @@ body {
 
     width: calc(100% - 15px);
 
-    padding: 5px;
+    padding: 0;
     resize: none;
     opacity: 0;
+
+    border: none;
 
     color: transparent;
     caret-color: transparent;
 }
 
-.text:focus {
+.textarea:focus {
     outline: 0;
 }
 
-.type-text {
+.char-cont {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0;
@@ -45,6 +46,7 @@ body {
     height: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
+    color: white;
     opacity: 1;
 }
 
@@ -59,20 +61,15 @@ body {
     border-radius: 8px;
 }
 
-.typing {
+.typing-cont {
+    position: relative;
     background: rgba(0, 0, 0, 0.1);
-
-    position: absolute;
-    top: 50%;
 
     font-family:  Arial, Helvetica, sans-serif;
     font-size: 20px;
-    border: 2px solid black;
 
     width: calc(100% - 15px);
     height: 100px;
-
-    padding: 5px;
 }
 
 .correct {

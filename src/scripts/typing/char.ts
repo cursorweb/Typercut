@@ -1,4 +1,4 @@
-const cont: HTMLDivElement = document.querySelector(".type-text");
+const cont: HTMLDivElement = document.querySelector(".char-cont");
 
 export class Char {
     char: string;
